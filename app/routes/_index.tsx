@@ -55,6 +55,7 @@ export default function Index() {
         clientRemixBuildVersion !== ""
       ) {
         // Here I am reloading the page, but you can do whatever you want here
+        console.log("New delpoyment detected, reloading the page");
         window.location.reload();
       }
     }
