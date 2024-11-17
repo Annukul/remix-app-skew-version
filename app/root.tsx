@@ -9,10 +9,15 @@ import {
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 import "./tailwind.css";
-import { assets } from "build/server/index.js";
+import { readFileSync } from "fs";
+import { resolve } from "path";
 
 export async function loader() {
-  const { version } = assets;
+  const packageJsonPath = resolve("./package.json");
+  const packageJsonContent = readFileSync(packageJsonPath, "utf-8");
+  const packageJson = JSON.parse(packageJsonContent);
+
+  const version = packageJson.version;
 
   return json({
     ENV: {
