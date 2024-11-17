@@ -60,5 +60,5 @@ export default function Index() {
     }
   }, [fetcher.data]);
 
-  return <div>Home</div>;
+  return <div>Home page</div>;
 }
