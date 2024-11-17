@@ -61,5 +61,5 @@ export default function Index() {
     }
   }, [fetcher.data]);
 
-  return <div>Home page</div>;
+  return <div>Skew version app</div>;
 }
