@@ -23,7 +23,7 @@ export default function Index() {
       if (document.visibilityState === "visible") {
         fetcher.load("/api/version");
       }
-    }, 10000); // You can change this to whatever you want
+    }, 1000); // You can change this to whatever you want
     return () => clearInterval(interval);
   }, [fetcher]);
 

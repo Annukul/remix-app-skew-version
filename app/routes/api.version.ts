@@ -9,8 +9,6 @@ export async function loader() {
   const versionMatch = indexContent.match(/"version":\s*"([^"]+)"/);
   const version = versionMatch ? versionMatch[1] : "unknown";
 
-  console.log({ version });
-
   return json({
     ENV: {
       SERVER_REMIX_BUILD_VERSION: version.trim(),
